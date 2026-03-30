@@ -90,6 +90,8 @@ jobs:
 
     - name: Translates (The Vulnerable Sink)
       uses: actions/github-script@v6.3.3
+      env:
+        BOT_APP_KEY: ${{ secrets.BOT_APP_KEY }}
       with:
         script: |
           // [!] VULNERABILITY HERE: Single quotes around the expression
